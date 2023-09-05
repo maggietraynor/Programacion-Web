@@ -1,2 +1,26 @@
-body{background-color: rgb(211, 130, 130);}
-p{color:rgb(35, 63, 189)}
+.titulo{
+    color: white;
+    background-color: rgb(156, 68, 190);
+    text-align: center;
+    position: sticky;top:0;
+    margin:20px 10px 50px 10px;
+    padding-top: 15;
+}
+
+.contacto{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+}
+
+body{
+    background-color: rgb(196, 124, 214);
+}
+
+p{
+    color:rgb(4, 36, 104)
+}
+
+.caja{
+    margin: 25px;
+}
