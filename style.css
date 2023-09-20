@@ -24,3 +24,8 @@ p{
 .caja{
     margin: 25px;
 }
+
+.fotosVinos{
+    align-items: center;
+    width: 200px;
+}
