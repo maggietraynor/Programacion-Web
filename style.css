@@ -9,11 +9,9 @@
     box-shadow: 0 9px 10px 0 rgba(52, 51, 51, 0.5);
 }
 
-.container-fluid{
+.navbar{
     position:sticky;
     top:0;
-    width: 100%;
-    margin:0;
     z-index: 1;
 }
 
@@ -28,7 +26,7 @@
 }
 
 body{
-    background-color: rgb(196, 124, 214);
+    background-color: #fff;
 }
 
 p{
@@ -52,7 +50,16 @@ p{
     align-items: center;
 }
 
-.carousel-item img{
-    max-width: 100% !important;
-    height: auto !important;
+.card-text{
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #000;
+}
+
+.textos{
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5vw;
 }
