@@ -1,16 +1,30 @@
-.titulo{
-    color: white;
-    background-color: rgb(156, 68, 190);
+.Vinito {
     text-align: center;
-    position: sticky;top:0;
-    margin:20px 10px 50px 10px;
-    padding-top: 15;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5vw;
+    background-color: #000;
+    box-shadow: 0 9px 10px 0 rgba(52, 51, 51, 0.5);
+}
+
+.container-fluid{
+    position:sticky;
+    top:0;
+    width: 100%;
+    margin:0;
+    z-index: 1;
 }
 
 .contacto{
     position:fixed;
     bottom:10px;
     right:10px;
+}
+
+.info{
+    padding-top: 3vw;
 }
 
 body{
@@ -28,4 +42,17 @@ p{
 .fotosVinos{
     align-items: center;
     width: 200px;
+}
+
+.dpampa{
+    display: flex;
+    row-gap: 50px;
+    column-gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-item img{
+    max-width: 100% !important;
+    height: auto !important;
 }

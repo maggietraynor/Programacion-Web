@@ -9,45 +9,248 @@
     <title> VentaVinos </title>
 </head>
 
+
 <body>
     <header>
-        <h4 class="info"> </h4>
-        <h1 class="titulo"> Vinito </h1>
-        <input type="text" name="Busqueda" id="" placeholder="Buscar">
-        <label for="Busqueda"> <a href='https://postimg.cc/F11T10NT' target='_blank'><img src='https://i.postimg.cc/F11T10NT/istockphoto-519752711-612x612.jpg'  width="20" height="20" alt='istockphoto-519752711-612x612'/></a> </label>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Productos </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#int">Desierto Pampa</a></li>
+                            <li><a class="dropdown-item" href="#">Desierto 25</a></li>
+                            <li><a class="dropdown-item" href="#">Pampa Mía</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Pedido</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Registrate</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
 
+
     <main>
-        <div class="fotosVinos">
-        <img src='./imagenes\vinoTinto.jpg' alt="Vino Tinto" width="200">
-        <img src="./imagenes/vinoBlanco.jpg" alt="Vino Blanco" width="300">
-        <img src="./imagenes/espumante.jpg" alt="Espumante" width="200">
+        <div class="Vinito">
+            <h2 class="text-center" id="tallerSecc">VINITO</h2>
         </div>
 
-        <h3>¿Quienes somos?</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="int">
+            <div class="col" id="tinto">
+                <div class="card h-100">
+                <img src="./imagenes/TintosD25.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tintos</h5>
+                    <p class="card-text">Sumérgete en la sofisticación y la riqueza de los vinos tintos de Bodega del Desierto. En cada copa, encontrarás una historia que se despliega con cada sorbo, una sinfonía de sabores y aromas que te transportarán a los viñedos más exquisitos del mundo.</p>
+                    <div class="text-center"><a href="#vinotinto" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                </div>
+                </div>
+            </div>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet dolorem quo a perspiciatis fuga. Dolores consectetur debitis illum, veritatis ipsa voluptates sed eos tempore magnam vero fugiat, cum esse. Ducimus!
-        Repellat vitae quos soluta perferendis ipsa ea tempora voluptatibus ipsum modi nobis sapiente necessitatibus consectetur ab ipsam porro, veritatis expedita at facilis iure voluptate alias. Consectetur amet quos modi delectus.
-        Quisquam, corporis culpa tempore ut perspiciatis aperiam maiores veritatis tempora laborum necessitatibus sit deserunt repellat temporibus placeat laboriosam vitae impedit cumque ipsa laudantium earum ad? Aliquam, porro? Pariatur, reiciendis iusto.
-        Labore cupiditate debitis expedita aliquam temporibus vero. Possimus sint natus, esse itaque ratione consectetur necessitatibus commodi quo hic, beatae magni! Earum eveniet deserunt cum reprehenderit omnis provident ducimus beatae. Dolor!
-        Nemo nihil, quia saepe atque molestiae quibusdam, et ratione a illo, autem molestias asperiores. Vero, illo asperiores, ex natus quasi ad inventore quod perspiciatis dolorum nulla omnis, laudantium expedita amet.</p>
+            <div class="col" id="blanco">
+                <div class="card h-100">
+                <img src="./imagenes/BlancosDPampa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Blancos</h5>
+                    <p class="card-text">Explora esta selección de vinos blancos y descubre el que mejor se adapte a tu gusto y ocasión. Desde blancos secos y refrescantes hasta dulces y afrutados, te invitamos a explorar el mundo del vino blanco a través de las botellas excepcionales de Bodega del Desierto.</p>
+                    <div class="text-center"><a href="#vinoblanco" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col" id="espumante">
+              <div class="card h-100">
+                <img src="./imagenes/EspumantesPampaMia.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Espumantes</h5>
+                  <p class="card-text">Estos espumantes son conocidos por sus burbujas finas y persistentes que danzan en tu paladar. Cada sorbo revela un equilibrio excepcional de frescura y complejidad, con sabores que van desde las frutas blancas y cítricas hasta las notas de pan tostado y avellana.</p>
+                  <div class="text-center"><a href="#vinoespumante" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div id="vinotinto">
+            <div id="carouselExampleCaptions" class="carouselslide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="image-container">
+                            <img src="./imagenes/D25-Malbec.jpg" class="d-block w-100" alt="imagen 1">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Malbec</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-PinnotNoir.jpg" class="d-block w-100" alt="imagen 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Pinot Noir</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-CabernetFranc.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Cabernet Franc</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-CabernetSauvignon.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Cabernet Sauvignon</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Blend.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Blend</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Merlot.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Merlot</h5>
+                            <p>Blend</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Syrah.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Syrah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus necessitatibus omnis, adipisci vero neque explicabo! Eum consequatur delectus, modi quasi esse, inventore ducimus officiis facilis labore ipsam rem corporis a.</h3>
+        </div>
         
-        <h3>Nuestra selección de vinos</h3>
 
-        <ul><li>TINTO</li><li>BLANCO</li><li>ESPUMANTE</li></ul>
+        <div id="vinoblanco">
+            <div id="carouselExampleCaptions" class="carouselslide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagenes/D25-Malbec.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Malbec</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-PinnotNoir.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Pinot Noir</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-CabernetFranc.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Cabernet Franc</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-CabernetSauvignon.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Cabernet Sauvignon</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Blend.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Blend</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Merlot.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Merlot</h5>
+                            <p>Blend</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/D25-Syrah.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Desierto 25</h5>
+                            <p>Syrah</p>
+                        </div>
+                    </div>
+                </div>
 
-        <img alt= "foto-emoji" src="./imagenes/emoji.jpg"> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus necessitatibus omnis, adipisci vero neque explicabo! Eum consequatur delectus, modi quasi esse, inventore ducimus officiis facilis labore ipsam rem corporis a.</h3>
+        </div>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet dolorem quo a perspiciatis fuga. Dolores consectetur debitis illum, veritatis ipsa voluptates sed eos tempore magnam vero fugiat, cum esse. Ducimus!
-        Repellat vitae quos soluta perferendis ipsa ea tempora voluptatibus ipsum modi nobis sapiente necessitatibus consectetur ab ipsam porro, veritatis expedita at facilis iure voluptate alias. Consectetur amet quos modi delectus.
-        Quisquam, corporis culpa tempore ut perspiciatis aperiam maiores veritatis tempora laborum necessitatibus sit deserunt repellat temporibus placeat laboriosam vitae impedit cumque ipsa laudantium earum ad? Aliquam, porro? Pariatur, reiciendis iusto.
-        Labore cupiditate debitis expedita aliquam temporibus vero. Possimus sint natus, esse itaque ratione consectetur necessitatibus commodi quo hic, beatae magni! Earum eveniet deserunt cum reprehenderit omnis provident ducimus beatae. Dolor!
-        Nemo nihil, quia saepe atque molestiae quibusdam, et ratione a illo, autem molestias asperiores. Vero, illo asperiores, ex natus quasi ad inventore quod perspiciatis dolorum nulla omnis, laudantium expedita amet.</p>
+        <div id="vinoespumante">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus necessitatibus omnis, adipisci vero neque explicabo! Eum consequatur delectus, modi quasi esse, inventore ducimus officiis facilis labore ipsam rem corporis a.</h3>
+        </div>
+
 
     
         <a class = contacto href='https://postimg.cc/ft4ZrMzd' target='_blank'> <img src='https://i.postimg.cc/ft4ZrMzd/580b57fcd9996e24bc43c543.png' width="70" height="70" alt='580b57fcd9996e24bc43c543'/></a>
     
-        <h4>Para más información...</h4>
+        <div class="info"> 
+            <h4>Para más información...</h4> 
+        </div>
+
 
         <div class="caja">
             <label for="iname"> Nombre: </label>
@@ -78,5 +281,7 @@
     <footer>
         <h5>¡copate con una copa de vino!</h5>
     </footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
