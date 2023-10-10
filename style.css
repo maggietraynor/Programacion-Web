@@ -9,6 +9,12 @@
     box-shadow: 0 9px 10px 0 rgba(52, 51, 51, 0.5);
 }
 
+.stickyHeader{
+    position:sticky;
+    top:0;
+    z-index: 1;
+}
+
 .navbar{
     position:sticky;
     top:0;
@@ -37,10 +43,6 @@ p{
     margin: 25px;
 }
 
-.fotosVinos{
-    align-items: center;
-    width: 200px;
-}
 
 .dpampa{
     display: flex;

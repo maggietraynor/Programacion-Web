@@ -1,4 +1,3 @@
-/* Estilo normal de la tarjeta */
 .card {
     transition: transform 0.3s; /* Agrega una transición suave */
 }
@@ -7,4 +6,13 @@
 .card:hover {
     transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el mouse */
+}
+
+
+.bodegas{
+    padding: 2vw;
+}
+
+.seleccion{
+    padding: 1.5vw;
 }
