@@ -21,12 +21,6 @@
     z-index: 1;
 }
 
-.contacto{
-    position:fixed;
-    bottom:10px;
-    right:10px;
-}
-
 .info{
     padding-top: 3vw;
 }
@@ -39,9 +33,7 @@ p{
     color:rgb(4, 36, 104)
 }
 
-.caja{
-    margin: 25px;
-}
+
 
 
 .dpampa{
@@ -64,4 +56,50 @@ p{
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 0.5vw;
+    padding-top: 1vw;
 }
+
+.footer{
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+    padding: 0.5vw;
+}
+
+.copate{
+    font-size: 1.5rem;
+}
+
+.rights{
+    padding: 1.5vw;
+    font-size: 0.7rem;
+}
+
+/* CONTACTO */
+input{
+    margin: 0;
+}
+
+.consultas{
+    margin: 25px;
+}
+
+.form-floating{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contacto{
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5vw;
+    padding-top: 1vw;
+}
+
+
+
+/* PEDIDO ONLINE */
+#Carrito {
+    padding: 30px !important;
+  }
