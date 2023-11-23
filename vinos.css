@@ -16,3 +16,10 @@
 .seleccion{
     padding: 1.5vw;
 }
+
+.footer{
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+    padding: 0.5vw;
+}

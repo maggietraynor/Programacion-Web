@@ -1,13 +1,12 @@
+// Variable para almacenar los productos en el carrito
+let productosEnCarrito = [];
+
 let dat = document.getElementById("enviarDatos");
 dat.addEventListener("click", consultaEnviada);
 
 function consultaEnviada(){
     alert("¡Gracias por enviar tu consulta! En la brevedad estaremos respondiendote vía mail.");
 }
-
-
-// Variable para almacenar los productos en el carrito
-let productosEnCarrito = [];
 
 // Para agregar un producto al carrito
 function agregarAlCarrito(idProducto) {
