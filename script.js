@@ -10,6 +10,7 @@ function consultaEnviada(){
 
 // Para agregar un producto al carrito
 function agregarAlCarrito(idProducto) {
+  console.log('Haciendo clic en agregarAlCarrito'); 
   // Buscar el producto en el carrito por su ID
   let producto = productosEnCarrito.find(function(item) {
     return item.id === idProducto;
