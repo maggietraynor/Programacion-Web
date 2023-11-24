@@ -5,7 +5,7 @@ let dat = document.getElementById("enviarDatos");
 dat.addEventListener("click", consultaEnviada);
 
 function consultaEnviada(){
-    alert("¡Gracias por enviar tu consulta! En la brevedad estaremos respondiendote vía mail.");
+  alert("¡Gracias por enviar tu consulta! En la brevedad estaremos respondiendote vía mail.");
 }
 
 // Para agregar un producto al carrito
@@ -25,26 +25,26 @@ function agregarAlCarrito(idProducto) {
 
   // Actualizar el carrito en la página
   actualizarCarrito();
-}
+  }
 
 function quitarDelCarrito(idProducto) {
-    // Buscar el producto en el carrito por su ID
-    let indiceProducto = productosEnCarrito.findIndex(function(item) {
-      return item.id === idProducto;
-    });
-  
-    // Si el producto existe en el carrito, reducir la cantidad
-    if (indiceProducto !== -1) {
-      productosEnCarrito[indiceProducto].cantidad--;
-  
-      // Si el producto esta solo una vez, eliminar el producto del carrito
-      if (productosEnCarrito[indiceProducto].cantidad === 0) {
-        productosEnCarrito.splice(indiceProducto, 1);
-      }
+  // Buscar el producto en el carrito por su ID
+  let indiceProducto = productosEnCarrito.findIndex(function(item) {
+    return item.id === idProducto;
+  });
+
+  // Si el producto existe en el carrito, reducir la cantidad
+  if (indiceProducto !== -1) {
+    productosEnCarrito[indiceProducto].cantidad--;
+
+    // Si el producto esta solo una vez, eliminar el producto del carrito
+    if (productosEnCarrito[indiceProducto].cantidad === 0) {
+      productosEnCarrito.splice(indiceProducto, 1);
     }
-  
-    // Actualizar el carrito en la página
-    actualizarCarrito();
+  }
+
+  // Actualizar el carrito en la página
+  actualizarCarrito();
   }
   
 
@@ -52,10 +52,10 @@ function quitarDelCarrito(idProducto) {
 function actualizarCarrito() {
     let elementoProductosEnCarrito = document.getElementById('productos-en-carrito');
     let precioTotal = 0;
-  
+
     // Limpiar el contenido actual del carrito
     elementoProductosEnCarrito.innerHTML = '';
-  
+
     // Recorrer los productos en el carrito y agregarlos al HTML
     productosEnCarrito.forEach(function(item) {
         let producto = obtenerProductoPorId(item.id);
@@ -75,12 +75,12 @@ function actualizarCarrito() {
         let idProducto = parseInt(this.getAttribute('data-id-producto'));
         quitarDelCarrito(idProducto);
         });
-  
+
         li.appendChild(botonEliminar);
         elementoProductosEnCarrito.appendChild(li);
     });
-  
-  
+
+
     // Mostrar el precio total acumulado en el carrito
     let elementoTotal = document.createElement('ul');
     elementoTotal.textContent = 'Total: $' + precioTotal.toFixed(2);
