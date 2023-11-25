@@ -6,166 +6,142 @@ function consultaEnviada(){
 }
 
 
+// Variable para almacenar los productos en el carrito
+let productosEnCarrito = [];
 
-let carrito = []; 
-
-
-function obtenerProductoPorMarcador(marcador) {
-  let productos = obtenerProductos();
-  return productos.find((producto) => producto.marcador === marcador);
-}
-
-
-function obtenerProductos() {
-  return [
-    {marcador: 1, titulo: "D25 - Pinot Noir", precio: 28050},
-    {marcador: 2, titulo: "D25 - Cabernet Franc", precio: 31160},
-    {marcador: 3, titulo: "D25 - Cabernet Sauvignon", precio: 30600},
-    {marcador: 4, titulo: "D25 - Merlot", precio: 30600},
-    {marcador: 5, titulo: "D25 - Syrah", precio: 30600},
-    {marcador: 6, titulo: "D25 - Blend", precio: 30600},
-    {marcador: 7, titulo: "D25 - Malbec", precio: 30600},
-    {marcador: 8, titulo: "DP - Pinot Noir", precio: 55200},
-    {marcador: 9, titulo: "DP - Cabernet Franc", precio: 60300},
-    {marcador: 10, titulo: "DP - Cabernet Sauvignon", precio: 52200},
-    {marcador: 11, titulo: "DP - Malbec", precio: 52200},
-    {marcador: 12, titulo: "DP - Syrah", precio: 52200},
-    {marcador: 13, titulo: "DP - Blend", precio: 52200},
-    {marcador: 14, titulo: "D25 - Sauvignon Blanc", precio: 26400},
-    {marcador: 15, titulo: "D25 - Chardonnay", precio: 26400},
-    {marcador: 16, titulo: "DP - Chardonnay", precio: 33900},
-    {marcador: 17, titulo: "DP - Viognier Late Harvest", precio: 44100},
-    {marcador: 18, titulo: "PM - Blanc de Blancs", precio: 36300},
-    {marcador: 19, titulo: "PM - Blanc de Noirs", precio: 36300},
-    {marcador: 20, titulo: "PM - Chardonnay", precio: 36300},
-  ];
-}
-
-
-let botonesCarrito = document.querySelectorAll(".btn.btn-primary[marcador]");
-botonesCarrito.forEach((boton) => {
-  boton.addEventListener("click", function () {
-    let marcador = parseInt(this.getAttribute("marcador"));
-    aniadirAlCarrito(marcador);
+// Función para agregar un producto al carrito
+function agregarAlCarrito(idProducto) {
+  // Buscar el producto en el carrito por su ID
+  let producto = productosEnCarrito.find(function(item) {
+    return item.id === idProducto;
   });
-});
 
-
-function aniadirAlCarrito(marcador) {
-  let producto = obtenerProductoPorMarcador(marcador);
-  let productoExistente = carrito.find((item) => item.marcador === marcador);
-
-  if (productoExistente) {
-    productoExistente.cantidad++;
+  // Si el producto no existe en el carrito, agregarlo con cantidad 1
+  if (!producto) {
+    productosEnCarrito.push({ id: idProducto, cantidad: 1 });
   } else {
-    carrito.push({ ...producto, cantidad: 1 });
+    // Si el producto ya existe, incrementar la cantidad
+    producto.cantidad++;
   }
 
-  mostrarCarrito();
+  // Actualizar el carrito en la página
+  actualizarCarrito();
 }
 
+function quitarDelCarrito(idProducto) {
+    // Buscar el producto en el carrito por su ID
+    let indiceProducto = productosEnCarrito.findIndex(function(item) {
+      return item.id === idProducto;
+    });
+  
+    // Si el producto existe en el carrito, reducir la cantidad
+    if (indiceProducto !== -1) {
+      productosEnCarrito[indiceProducto].cantidad--;
+  
+      // Si el producto esta solo una vez, eliminar el producto del carrito
+      if (productosEnCarrito[indiceProducto].cantidad === 0) {
+        productosEnCarrito.splice(indiceProducto, 1);
+      }
+    }
+  
+    // Actualizar el carrito en la página
+    actualizarCarrito();
+  }
+  
 
-function mostrarCarrito() {
-  let carritoElement = document.getElementById("compras");
-  carritoElement.innerHTML = "";
-
-  let subtotal = 0;
-
-  if (carrito.length === 0) {
-    carritoElement.innerHTML = "<p>No hay productos en el carrito.</p>";
-  } else {
-    carrito.forEach((producto) => {
-      const compraElement = document.createElement("div");
-      compraElement.classList.add("compra");
-
-      const tituloElement = document.createElement("p");
-      tituloElement.classList.add("titulo");
-      tituloElement.textContent = `${producto.titulo} - Precio: $${producto.precio} - Cantidad: ${producto.cantidad}`;
-      compraElement.appendChild(tituloElement);
-
-      const eliminarElement = document.createElement("span");
-      eliminarElement.classList.add("eliminar");
-      eliminarElement.textContent = "x";
-      eliminarElement.addEventListener("click", () => eliminarDelCarrito(producto.marcador));
-      compraElement.appendChild(eliminarElement);
-
-      carritoElement.appendChild(compraElement);
-
-      subtotal += producto.precio * producto.cantidad;
+// Función para actualizar el carrito en la página
+function actualizarCarrito() {
+    let elementoProductosEnCarrito = document.getElementById('productos-en-carrito');
+    let precioTotal = 0;
+  
+    // Limpiar el contenido actual del carrito
+    elementoProductosEnCarrito.innerHTML = '';
+  
+    // Recorrer los productos en el carrito y agregarlos al HTML
+    productosEnCarrito.forEach(function(item) {
+        let producto = obtenerProductoPorId(item.id);
+        let precioProducto = calcularPrecioProducto(producto, item.cantidad);
+        precioTotal += precioProducto;
+    
+        let li = document.createElement('li');
+        li.textContent = producto.nombre + ' x ' + item.cantidad + ' - $' + precioProducto.toFixed(2);
+        li.classList.add("elemento-Carrito")
+    
+        // Agrega un botón de eliminación al elemento li
+        let botonEliminar = document.createElement('button');
+        botonEliminar.textContent = 'Eliminar';
+        botonEliminar.setAttribute('data-id-producto', item.id);
+        botonEliminar.classList.add("elemento-Eliminar")
+        botonEliminar.addEventListener('click', function() {
+        let idProducto = parseInt(this.getAttribute('data-id-producto'));
+        quitarDelCarrito(idProducto);
+        });
+  
+        li.appendChild(botonEliminar);
+        elementoProductosEnCarrito.appendChild(li);
+    });
+  
+  
+    // Mostrar el precio total acumulado en el carrito
+    let elementoTotal = document.createElement('ul');
+    elementoTotal.textContent = 'Total: $' + precioTotal.toFixed(2);
+    elementoProductosEnCarrito.appendChild(elementoTotal);
+  }
+  
+// Función auxiliar para obtener un producto por su ID
+function obtenerProductoPorId(idProducto) {
+    let productos = [
+      { id: 1, nombre:  'D25 - Pinot Noir', precio: 28050},
+      { id: 2, nombre: 'D25 - Cabernet Franc', precio: 31160},
+      { id: 3, nombre: 'D25 - Cabernet Sauvignon', precio: 30600 },
+      { id: 4, nombre: 'D25 - Merlot', precio: 30600 },
+      { id: 5, nombre: 'D25 - Syrah', precio: 30600},
+      { id: 6, nombre: 'D25 - Blend', precio: 30600},
+      { id: 7, nombre: 'D25 - Malbec', precio: 30600},
+      { id: 8, nombre: 'DP - Pinot Noir', precio: 55200},
+      { id: 9, nombre: 'DP - Cabernet Franc', precio: 60300},
+      { id: 10, nombre: 'DP - Cabernet Sauvignon', precio: 52200},
+      { id: 11, nombre: 'DP - Malbec', precio: 52200},
+      { id: 12, nombre: 'DP - Syrah', precio: 52200},
+      { id: 13, nombre: 'DP - Blend', precio: 52200},
+      { id: 14, nombre: 'D25 - Sauvignon Blanc', precio: 26400},
+      { id: 15, nombre: 'D25 - Chardonnay', precio: 26400},
+      { id: 16, nombre: 'DP - Chardonnay', precio: 33900},
+      { id: 17, nombre: 'DP - Viognier Late Harvest', precio: 44100},
+      { id: 18, nombre: 'PM - Blanc de Blancs', precio: 36300},
+      { id: 19, nombre: 'PM - Blanc de Noirs', precio: 36300},
+      { id: 20, nombre: 'PM - Chardonnay', precio: 36300},
+    ];
+  
+    return productos.find(function(producto) {
+      return producto.id === idProducto;
     });
   }
+  
 
-  let subtotalElement = document.getElementById("subtotalcompra");
-  subtotalElement.textContent = `Subtotal: $${subtotal}`;
-
-  const mensajeExito = document.getElementById("mensajeExito");
-  if (carrito.length > 0) {
-    mensajeExito.style.display = "none";
-  }
+// Función auxiliar para calcular el precio de un producto en función de su cantidad
+function calcularPrecioProducto(producto, cantidad) {
+  return producto.precio * cantidad;
 }
-
-
-function eliminarDelCarrito(marcador) {
-  carrito = carrito.filter((item) => item.marcador !== marcador);
-  mostrarCarrito();
-}
-
-
-function finalizarCompra() {
-  if (carrito.length === 0) {
-    alert("No hay items en el carrito.");
-    return;
-  }
-
-  var modalCompra = new bootstrap.Modal(document.getElementById("modalCompra"));
-  modalCompra.show();
-}
-
-
-function reiniciarCarrito() {
-  carrito = []; 
-  mostrarCarrito(); 
-  const mensajeExito = document.getElementById("mensajeExito");
-  mensajeExito.style.display = "none";
-}
-
-function completarCompra() {
-  var nombre = document.getElementById("nombre").value;
-  var apellido = document.getElementById("apellido").value;
-  var edad = document.getElementById("edad").value;
-  var numeroTarjeta = document.getElementById("numeroTarjeta").value;
-
-  if (nombre.trim() === "" || apellido.trim() === "" || isNaN(edad) || numeroTarjeta.length !== 16) {
-    alert("Por favor, complete todos los campos correctamente.");
-    return;
-  }
-
-  if (parseInt(edad) < 18) {
-    alert("Debe ser mayor de 18 años para realizar la compra.");
-    return;
-  }
-
-  var modalCompra = new bootstrap.Modal(document.getElementById("modalCompra"));
-  modalCompra.hide();
-
-  alert("Su compra se ha realizado con éxito.");
-
-  reiniciarCarrito();
-}
-
-var botonVaciarCarrito = document.querySelector(".vaciar-carrito");
-botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
-  carrito = [];
-  mostrarCarrito();
+    // Vaciar el arreglo de productos en el carrito
+    productosEnCarrito = [];
+  
+    // Actualizar el carrito en la página
+    actualizarCarrito();
 }
 
-
-
-
-
-
-
-
-
+function finalizarCompra() {
+    // Verificar si el carrito está vacío
+    if (productosEnCarrito.length === 0) {
+      alert("El carrito está vacío");
+      return; // Salir de la función sin continuar con la finalización de la compra
+    }
+      
+    // Mostrar un mensaje al usuario
+    alert("Su compra se ha realizado con éxito");
+  
+    // Vaciar el carrito
+    vaciarCarrito();
+  }
