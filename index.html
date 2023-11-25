@@ -1,145 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title> VentaVinos </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> VentaVinos </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 
-   
-</head>
-
-<body>
-    <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#consultas">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pedido.html">Pedido Online</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    </header>
-
-    <main>
-        <div class="Vinito">
-            <h2 class="text-center" id="tallerSecc">VINITO</h2>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="int">
-            <div class="col" id="tinto">
-                <div class="card h-100">
-                <img src="./imagenes/TintosD25.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Tintos</h5>
-                    <p class="card-text">Sumérgete en la sofisticación y la riqueza de los vinos tintos de Bodega del Desierto. En cada copa, encontrarás una historia que se despliega con cada sorbo, una sinfonía de sabores y aromas que te transportarán a los viñedos más exquisitos del mundo.</p>
-                    <div class="text-center"><a href="tintos.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
-                </div>
-                </div>
-            </div>
-
-            <div class="col" id="blanco">
-                <div class="card h-100">
-                <img src="./imagenes/BlancosDPampa.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Blancos</h5>
-                    <p class="card-text">Explora esta selección de vinos blancos y descubre el que mejor se adapte a tu gusto y ocasión. Desde blancos secos y refrescantes hasta dulces y afrutados, te invitamos a explorar el mundo del vino blanco a través de las botellas excepcionales de Bodega del Desierto.</p>
-                    <div class="text-center"><a href="blancos.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
-                </div>
-                </div>
-            </div>
-
-            <div class="col" id="espumante">
-              <div class="card h-100">
-                <img src="./imagenes/EspumantesPampaMia.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Espumantes</h5>
-                  <p class="card-text">Estos espumantes son conocidos por sus burbujas finas y persistentes que danzan en tu paladar. Cada sorbo revela un equilibrio excepcional de frescura y complejidad, con sabores que van desde las frutas blancas y cítricas hasta las notas de pan tostado y avellana.</p>
-                  <div class="text-center"><a href="espumantes.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="textos" id="dtos">
-            <h4>¡No te olvides de consultar a cerca de nuestros descuentos!</h4>
-        </div>
-
-
-        <div class="consultas">
-            <form class="formulario" target="_blank" action="https://formsubmit.co/mtraynor@itba.edu.ar" method="POST">
-            <div class="form-group">
-                <div class="row g-2">
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="name" placeholder="Nombre" autocomplete="additional-name" required>
-                             <label for="name">Nombre</label>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-floating">
-                        <input type="text" class="form-control" id="lastname" placeholder="Apellido" required>
-                        <label for="lastname">Apellido</label>
-                    </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" id="cellphone" placeholder="Celular" required>
-                            <label for="cellphone">Celular</label>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="mail" placeholder="name@example.com" required>
-                            <label for="mail">Email</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-md">
-                        <div class="form-floating">
-                        <textarea name="message" class="form-control" placeholder="Leave a comment here" id="consultbox" style="height: 100px" required></textarea>
-                        <label for="consultbox">Consulta</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-lg" id="enviarDatos">Enviar consulta</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="textos" id="pedido">
-            <h3>Mirá tu pedido haciendo click en el Pedido Online.</h3>
-        </div>
-
-
-    </main>
     
-    <footer>
-        <div class = "footer">
-            <h6 class = "copate">¡Copate con una copa de vino!</h6>
-            <h6 class = "rights"> © Copyright 2023 - Bodega del Desierto. All rights reserved. </h6>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./script.js"> </script>
-</body>
+    </head>
+
+    <body>
+        <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#consultas">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="pedido.html">Pedido Online</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <main>
+            <div class="Vinito">
+                <h2 class="text-center" id="tallerSecc">VINITO</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="int">
+                <div class="col" id="tinto">
+                    <div class="card h-100">
+                    <img src="./imagenes/TintosD25.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tintos</h5>
+                        <p class="card-text">Sumérgete en la sofisticación y la riqueza de los vinos tintos de Bodega del Desierto. En cada copa, encontrarás una historia que se despliega con cada sorbo, una sinfonía de sabores y aromas que te transportarán a los viñedos más exquisitos del mundo.</p>
+                        <div class="text-center"><a href="tintos.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col" id="blanco">
+                    <div class="card h-100">
+                    <img src="./imagenes/BlancosDPampa.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Blancos</h5>
+                        <p class="card-text">Explora esta selección de vinos blancos y descubre el que mejor se adapte a tu gusto y ocasión. Desde blancos secos y refrescantes hasta dulces y afrutados, te invitamos a explorar el mundo del vino blanco a través de las botellas excepcionales de Bodega del Desierto.</p>
+                        <div class="text-center"><a href="blancos.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col" id="espumante">
+                <div class="card h-100">
+                    <img src="./imagenes/EspumantesPampaMia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Espumantes</h5>
+                    <p class="card-text">Estos espumantes son conocidos por sus burbujas finas y persistentes que danzan en tu paladar. Cada sorbo revela un equilibrio excepcional de frescura y complejidad, con sabores que van desde las frutas blancas y cítricas hasta las notas de pan tostado y avellana.</p>
+                    <div class="text-center"><a href="espumantes.html" class="btn btn-outline-secondary btn-lg" id="botonesWork">Selección</a></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="textos" id="dtos">
+                <h4>¡No te olvides de consultar a cerca de nuestros descuentos!</h4>
+            </div>
+
+
+            <div class="consultas">
+                <form class="formulario" target="_blank" action="https://formsubmit.co/mtraynor@itba.edu.ar" method="POST">
+                <div class="form-group">
+                    <div class="row g-2">
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre" autocomplete="additional-name" required>
+                                <label for="name">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                            <input type="text" class="form-control" id="lastname" placeholder="Apellido" required>
+                            <label for="lastname">Apellido</label>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="cellphone" placeholder="Celular" required>
+                                <label for="cellphone">Celular</label>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="mail" placeholder="name@example.com" required>
+                                <label for="mail">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-md">
+                            <div class="form-floating">
+                            <textarea name="message" class="form-control" placeholder="Leave a comment here" id="consultbox" style="height: 100px" required></textarea>
+                            <label for="consultbox">Consulta</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg" id="enviarDatos">Enviar consulta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="textos" id="pedido">
+                <h3>Mirá tu pedido haciendo click en el Pedido Online.</h3>
+            </div>
+
+
+        </main>
+        
+        <footer>
+            <div class = "footer">
+                <h6 class = "copate">¡Copate con una copa de vino!</h6>
+                <h6 class = "rights"> © Copyright 2023 - Bodega del Desierto. All rights reserved. </h6>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="./script.js"> </script>
+    </body>
 </html>
