@@ -6,6 +6,7 @@ function consultaEnviada(){
 }
 
 
+
 let carrito = []; 
 
 
@@ -41,17 +42,16 @@ function obtenerProductos() {
 }
 
 
-let botonesCarrito = document.querySelectorAll(".btn-primary[marcador]");
+let botonesCarrito = document.querySelectorAll(".btn.btn-primary[marcador]");
 botonesCarrito.forEach((boton) => {
   boton.addEventListener("click", function () {
     let marcador = parseInt(this.getAttribute("marcador"));
-    añadirAlCarrito(marcador);
+    aniadirAlCarrito(marcador);
   });
 });
 
 
-
-function añadirAlCarrito(marcador) {
+function aniadirAlCarrito(marcador) {
   let producto = obtenerProductoPorMarcador(marcador);
   let productoExistente = carrito.find((item) => item.marcador === marcador);
 
