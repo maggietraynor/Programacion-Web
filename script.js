@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // Función auxiliar para obtener un producto por su ID
   function obtenerProductoPorId(idProducto) {
     let productos = [
@@ -65,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Si el producto esta solo una vez, eliminar el producto del carrito
         if (productosEnCarrito[indiceProducto].cantidad === 0) {
           productosEnCarrito.splice(indiceProducto, 1);
+          alert("Se ha removido el producto del carrito");
         }
       }
     
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Asigna el manejador de evento a cada botón
         botonesAgregarCarrito.forEach(function (boton) {
             boton.addEventListener('click', function () {
+                alert("Se ha agregado el producto al carrito");
                 // Obten el ID del producto desde algún atributo del botón, por ejemplo, data-id
                 let idProducto = parseInt(this.getAttribute('data-id-producto'));
                 
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function finalizarCompra() {
       // Verificar si el carrito está vacío
       if (productosEnCarrito.length === 0) {
-        alert("El carrito está vacío");
+        alert("El carrito se encuentra vacío");
         return; // Salir de la función sin continuar con la finalización de la compra
       }
         
@@ -165,6 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
             vaciarCarrito()
         });
     });
+
+    let dat = document.getElementById("enviarDatos");
+    dat.addEventListener("click", consultaEnviada);
+
+    function consultaEnviada(){
+      alert("¡Gracias por enviar tu consulta! En la brevedad estaremos respondiendote vía mail.");
+    }
 });
 
 
