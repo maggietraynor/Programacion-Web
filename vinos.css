@@ -8,6 +8,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el mouse */
 }
 
+#titulo{
+    position:sticky;
+    top:0;
+    z-index: 30;
+}
+
+#navbarSupportedContent{
+    padding: 1vw;
+    font-size: 1.2rem;
+}
 
 .bodegas{
     padding: 2vw;
@@ -15,7 +25,7 @@
 
 .seleccion{
     font-family: 'Georgia', serif;
-    padding-top: 6vw;
+    padding-top: 4vw;
     text-align: center;
 }
 

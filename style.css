@@ -9,11 +9,17 @@
     box-shadow: 0 9px 10px 0 rgba(52, 51, 51, 0.5);
 }
 
-.stickyHeader{
+#titulo{
     position:sticky;
     top:0;
     z-index: 30;
 }
+
+#navbarSupportedContent{
+    padding: 1vw;
+    font-size: 1.2rem;
+}
+
 
 .navbar{
     position:sticky;
